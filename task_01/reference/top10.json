@@ -1,0 +1,14 @@
+{
+  "ids": [
+    "Atf1(bZIP)/K562-ATF1-ChIP-Seq(GSE31477)/Homer",
+    "Atf7(bZIP)/3T3L1-Atf7-ChIP-Seq(GSE56872)/Homer",
+    "Atf2(bZIP)/3T3L1-Atf2-ChIP-Seq(GSE56872)/Homer",
+    "c-Jun-CRE(bZIP)/K562-cJun-ChIP-Seq(GSE31477)/Homer",
+    "JunD(bZIP)/K562-JunD-ChIP-Seq/Homer",
+    "CRE(bZIP)/Promoter/Homer",
+    "Atf4(bZIP)/MEF-Atf4-ChIP-Seq(GSE35681)/Homer",
+    "Chop(bZIP)/MEF-Chop-ChIP-Seq(GSE35681)/Homer",
+    "ETS1(ETS)/Jurkat-ETS1-ChIP-Seq(GSE17954)/Homer",
+    "Atf3(bZIP)/GBM-ATF3-ChIP-Seq(GSE33912)/Homer"
+  ]
+}

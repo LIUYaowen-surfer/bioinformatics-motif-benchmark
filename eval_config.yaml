@@ -1,0 +1,13 @@
+# Verified utility runtime, not an installed analysis environment lock.
+utility_runtime_tested:
+  python: "3.12.14"
+  openpyxl: "3.1.5"
+  numpy_for_optional_background_audit: "2.3.5"
+minimum_python: "3.11"
+analysis_environment:
+  network: "offline"
+  homer_version: "evaluator must install and record; original author version unresolved"
+  meme_suite_version: "evaluator must install and record; historical defaults not frozen"
+  hydra_motif_database: "resources/hydra/resource_manifest.json"
+  arabidopsis_cisbp_database: "complete versioned Cis-BP library required; see docs/resources.md"
+# Record the same database releases, resource hashes and resource limits for all Agents.

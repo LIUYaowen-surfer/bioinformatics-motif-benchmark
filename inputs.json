@@ -1,0 +1,28 @@
+{
+  "task_01": {
+    "background": {
+      "sequences": 33214,
+      "accepted_sha256": [
+        "03a9be2f74a20de3eff60595fe27a09e894644926340ee9aad7a62d0b1379d05",
+        "0f38560e952331cae023c7ea2a23e03161a0ffc8c3e3efaa5afd2679cac08c78"
+      ]
+    },
+    "target": {
+      "sequences": 2183,
+      "accepted_sha256": [
+        "d87d177122418cb59965150aa4b34cfd1d797711bb70f8283138806b931cfe58",
+        "e7d8ed56e4a26016e832e5874e65c70abbd0dc113bcc0edfb1317bd1d0b6fe59"
+      ]
+    }
+  },
+  "task_02": {
+    "target": {
+      "sequences": 10013,
+      "accepted_sha256": [
+        "476da8ed78d8ebe220c87460b5f3982c6d78a9571e9edd9ed86d8db18900b38b",
+        "4a43ff55f4ae34b3b8dc1868167072eee4f1597bbdf10a4bcd7b869886c0f132"
+      ],
+      "length": 100
+    }
+  }
+}

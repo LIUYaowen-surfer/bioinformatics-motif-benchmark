@@ -1,0 +1,958 @@
+{
+  "method": "Source-rule replay of HOMER GC weighting and 1-3-mer normalization only",
+  "gc_denominator": "acgt",
+  "input_sha256": {
+    "task_01\\input\\target_sequences.fasta": "d87d177122418cb59965150aa4b34cfd1d797711bb70f8283138806b931cfe58",
+    "task_01\\input\\background_sequences.fasta": "0f38560e952331cae023c7ea2a23e03161a0ffc8c3e3efaa5afd2679cac08c78"
+  },
+  "raw_target_sequences": 2183,
+  "raw_background_sequences": 33214,
+  "poor_sequence_filter_ids": [],
+  "gc_bins": [
+    {
+      "bin": 0,
+      "target": 6,
+      "background": 206,
+      "retained": true
+    },
+    {
+      "bin": 1,
+      "target": 275,
+      "background": 6490,
+      "retained": true
+    },
+    {
+      "bin": 2,
+      "target": 1279,
+      "background": 18636,
+      "retained": true
+    },
+    {
+      "bin": 3,
+      "target": 452,
+      "background": 6659,
+      "retained": true
+    },
+    {
+      "bin": 4,
+      "target": 127,
+      "background": 1072,
+      "retained": true
+    },
+    {
+      "bin": 5,
+      "target": 29,
+      "background": 117,
+      "retained": true
+    },
+    {
+      "bin": 6,
+      "target": 12,
+      "background": 23,
+      "retained": true
+    },
+    {
+      "bin": 7,
+      "target": 3,
+      "background": 9,
+      "retained": true
+    },
+    {
+      "bin": 8,
+      "target": 0,
+      "background": 2,
+      "retained": false
+    },
+    {
+      "bin": 9,
+      "target": 0,
+      "background": 0,
+      "retained": false
+    },
+    {
+      "bin": 10,
+      "target": 0,
+      "background": 0,
+      "retained": false
+    }
+  ],
+  "unsupported_gc_bin_background_ids": [
+    "21973",
+    "92136"
+  ],
+  "retained_target_sequences": 2183,
+  "retained_background_sequences": 33212,
+  "initial_gc_background_weight_sum": 33211.98705000001,
+  "normalization_iterations": 160,
+  "final_background_weight_sum": 32333.520174941983,
+  "group_file_6_decimal_weight_sum": 32333.520313,
+  "iteration_history": [
+    {
+      "iteration": 1,
+      "error": 0.003545291274371567,
+      "background_weight_sum": 33207.937639346295
+    },
+    {
+      "iteration": 2,
+      "error": 0.003504047338085372,
+      "background_weight_sum": 33203.6323325533
+    },
+    {
+      "iteration": 3,
+      "error": 0.003463721819915992,
+      "background_weight_sum": 33199.082713159565
+    },
+    {
+      "iteration": 4,
+      "error": 0.0034242800984208713,
+      "background_weight_sum": 33194.30019650167
+    },
+    {
+      "iteration": 5,
+      "error": 0.0033856905595876278,
+      "background_weight_sum": 33189.29909388988
+    },
+    {
+      "iteration": 6,
+      "error": 0.0033479276729425542,
+      "background_weight_sum": 33184.096111372535
+    },
+    {
+      "iteration": 7,
+      "error": 0.0033109692391025238,
+      "background_weight_sum": 33178.71214132881
+    },
+    {
+      "iteration": 8,
+      "error": 0.003274797061801219,
+      "background_weight_sum": 33173.1686772504
+    },
+    {
+      "iteration": 9,
+      "error": 0.0032393927876054355,
+      "background_weight_sum": 33167.48632504356
+    },
+    {
+      "iteration": 10,
+      "error": 0.0032047378530232857,
+      "background_weight_sum": 33161.68505992097
+    },
+    {
+      "iteration": 11,
+      "error": 0.003170813458332809,
+      "background_weight_sum": 33155.78338470479
+    },
+    {
+      "iteration": 12,
+      "error": 0.0031376005268694733,
+      "background_weight_sum": 33149.79730405009
+    },
+    {
+      "iteration": 13,
+      "error": 0.0031050794930855617,
+      "background_weight_sum": 33143.74066798724
+    },
+    {
+      "iteration": 14,
+      "error": 0.0030732306769523277,
+      "background_weight_sum": 33137.62493369657
+    },
+    {
+      "iteration": 15,
+      "error": 0.003042034369535323,
+      "background_weight_sum": 33131.46015784971
+    },
+    {
+      "iteration": 16,
+      "error": 0.003011471236366199,
+      "background_weight_sum": 33125.254950584276
+    },
+    {
+      "iteration": 17,
+      "error": 0.002981522270047255,
+      "background_weight_sum": 33119.01652028262
+    },
+    {
+      "iteration": 18,
+      "error": 0.002952168919679608,
+      "background_weight_sum": 33112.751072072424
+    },
+    {
+      "iteration": 19,
+      "error": 0.0029233932447748257,
+      "background_weight_sum": 33106.4640076619
+    },
+    {
+      "iteration": 20,
+      "error": 0.002895177887243436,
+      "background_weight_sum": 33100.159763956646
+    },
+    {
+      "iteration": 21,
+      "error": 0.0028675060301816785,
+      "background_weight_sum": 33093.84203580832
+    },
+    {
+      "iteration": 22,
+      "error": 0.002840361428634945,
+      "background_weight_sum": 33087.51410655431
+    },
+    {
+      "iteration": 23,
+      "error": 0.0028137284602778216,
+      "background_weight_sum": 33081.17886897656
+    },
+    {
+      "iteration": 24,
+      "error": 0.0027875921013485396,
+      "background_weight_sum": 33074.83888357901
+    },
+    {
+      "iteration": 25,
+      "error": 0.0027619378677742174,
+      "background_weight_sum": 33068.49636239061
+    },
+    {
+      "iteration": 26,
+      "error": 0.0027367518490631166,
+      "background_weight_sum": 33062.153303406456
+    },
+    {
+      "iteration": 27,
+      "error": 0.002712020702256206,
+      "background_weight_sum": 33055.81111335657
+    },
+    {
+      "iteration": 28,
+      "error": 0.0026877326039835138,
+      "background_weight_sum": 33049.47101713305
+    },
+    {
+      "iteration": 29,
+      "error": 0.002663876051983899,
+      "background_weight_sum": 33043.13434639135
+    },
+    {
+      "iteration": 30,
+      "error": 0.002640439115685349,
+      "background_weight_sum": 33036.80236461737
+    },
+    {
+      "iteration": 31,
+      "error": 0.0026174102252348513,
+      "background_weight_sum": 33030.47619609989
+    },
+    {
+      "iteration": 32,
+      "error": 0.0025947782449996016,
+      "background_weight_sum": 33024.15689276226
+    },
+    {
+      "iteration": 33,
+      "error": 0.0025725324556277133,
+      "background_weight_sum": 33017.84541771292
+    },
+    {
+      "iteration": 34,
+      "error": 0.0025506625379131394,
+      "background_weight_sum": 33011.54264526423
+    },
+    {
+      "iteration": 35,
+      "error": 0.0025291585469496597,
+      "background_weight_sum": 33005.2493484382
+    },
+    {
+      "iteration": 36,
+      "error": 0.002508011006649066,
+      "background_weight_sum": 32998.96607432902
+    },
+    {
+      "iteration": 37,
+      "error": 0.0024872109758567688,
+      "background_weight_sum": 32992.69342452745
+    },
+    {
+      "iteration": 38,
+      "error": 0.002466749687464721,
+      "background_weight_sum": 32986.4318876079
+    },
+    {
+      "iteration": 39,
+      "error": 0.002446618621694288,
+      "background_weight_sum": 32980.182008069445
+    },
+    {
+      "iteration": 40,
+      "error": 0.0024268094510513562,
+      "background_weight_sum": 32973.94418570772
+    },
+    {
+      "iteration": 41,
+      "error": 0.0024073142631328534,
+      "background_weight_sum": 32967.71883694989
+    },
+    {
+      "iteration": 42,
+      "error": 0.0023881253501387995,
+      "background_weight_sum": 32961.50626491858
+    },
+    {
+      "iteration": 43,
+      "error": 0.002369235443718393,
+      "background_weight_sum": 32955.30687205536
+    },
+    {
+      "iteration": 44,
+      "error": 0.002350637288376515,
+      "background_weight_sum": 32949.12105050626
+    },
+    {
+      "iteration": 45,
+      "error": 0.0023323238700085278,
+      "background_weight_sum": 32942.94915718253
+    },
+    {
+      "iteration": 46,
+      "error": 0.002314288401750352,
+      "background_weight_sum": 32936.79152256691
+    },
+    {
+      "iteration": 47,
+      "error": 0.00229652432776168,
+      "background_weight_sum": 32930.648341218046
+    },
+    {
+      "iteration": 48,
+      "error": 0.0022790254531999308,
+      "background_weight_sum": 32924.51989829135
+    },
+    {
+      "iteration": 49,
+      "error": 0.0022617856265548407,
+      "background_weight_sum": 32918.40644942991
+    },
+    {
+      "iteration": 50,
+      "error": 0.0022447989154116303,
+      "background_weight_sum": 32912.308159969085
+    },
+    {
+      "iteration": 51,
+      "error": 0.0022280599435121323,
+      "background_weight_sum": 32906.22512697005
+    },
+    {
+      "iteration": 52,
+      "error": 0.0022115634623558113,
+      "background_weight_sum": 32900.157555035825
+    },
+    {
+      "iteration": 53,
+      "error": 0.0021953040141516403,
+      "background_weight_sum": 32894.10553144128
+    },
+    {
+      "iteration": 54,
+      "error": 0.002179276408651614,
+      "background_weight_sum": 32888.06917248921
+    },
+    {
+      "iteration": 55,
+      "error": 0.0021634755921522146,
+      "background_weight_sum": 32882.04866603703
+    },
+    {
+      "iteration": 56,
+      "error": 0.0021478965809685474,
+      "background_weight_sum": 32876.04419534684
+    },
+    {
+      "iteration": 57,
+      "error": 0.002132534553445086,
+      "background_weight_sum": 32870.05581625523
+    },
+    {
+      "iteration": 58,
+      "error": 0.002117384987750555,
+      "background_weight_sum": 32864.08377205518
+    },
+    {
+      "iteration": 59,
+      "error": 0.0021024434903901693,
+      "background_weight_sum": 32858.12821600219
+    },
+    {
+      "iteration": 60,
+      "error": 0.002087705626883155,
+      "background_weight_sum": 32852.18918794302
+    },
+    {
+      "iteration": 61,
+      "error": 0.0020731671489689083,
+      "background_weight_sum": 32846.26661813497
+    },
+    {
+      "iteration": 62,
+      "error": 0.002058824001717564,
+      "background_weight_sum": 32840.36056815813
+    },
+    {
+      "iteration": 63,
+      "error": 0.0020446721304177686,
+      "background_weight_sum": 32834.47108526742
+    },
+    {
+      "iteration": 64,
+      "error": 0.002030707599288085,
+      "background_weight_sum": 32828.59815646334
+    },
+    {
+      "iteration": 65,
+      "error": 0.0020169266505756234,
+      "background_weight_sum": 32822.74181660859
+    },
+    {
+      "iteration": 66,
+      "error": 0.002003325580769514,
+      "background_weight_sum": 32816.90215030486
+    },
+    {
+      "iteration": 67,
+      "error": 0.001989900754321445,
+      "background_weight_sum": 32811.07924470735
+    },
+    {
+      "iteration": 68,
+      "error": 0.0019766486389547542,
+      "background_weight_sum": 32805.27308000064
+    },
+    {
+      "iteration": 69,
+      "error": 0.001963565870672465,
+      "background_weight_sum": 32799.48360392087
+    },
+    {
+      "iteration": 70,
+      "error": 0.001950649160683987,
+      "background_weight_sum": 32793.71079924677
+    },
+    {
+      "iteration": 71,
+      "error": 0.0019378952888053254,
+      "background_weight_sum": 32787.95470762253
+    },
+    {
+      "iteration": 72,
+      "error": 0.001925301097692093,
+      "background_weight_sum": 32782.21533561587
+    },
+    {
+      "iteration": 73,
+      "error": 0.0019128635333073786,
+      "background_weight_sum": 32776.49278503653
+    },
+    {
+      "iteration": 74,
+      "error": 0.0019005796842858096,
+      "background_weight_sum": 32770.78698550585
+    },
+    {
+      "iteration": 75,
+      "error": 0.0018884467152455928,
+      "background_weight_sum": 32765.097928399904
+    },
+    {
+      "iteration": 76,
+      "error": 0.0018764617760581282,
+      "background_weight_sum": 32759.4255770635
+    },
+    {
+      "iteration": 77,
+      "error": 0.0018646221120408152,
+      "background_weight_sum": 32753.769832824353
+    },
+    {
+      "iteration": 78,
+      "error": 0.0018529250273211961,
+      "background_weight_sum": 32748.130692217204
+    },
+    {
+      "iteration": 79,
+      "error": 0.001841367872159382,
+      "background_weight_sum": 32742.50810960621
+    },
+    {
+      "iteration": 80,
+      "error": 0.00182994810437398,
+      "background_weight_sum": 32736.90202756922
+    },
+    {
+      "iteration": 81,
+      "error": 0.0018186632520109734,
+      "background_weight_sum": 32731.31239895782
+    },
+    {
+      "iteration": 82,
+      "error": 0.0018075109375747243,
+      "background_weight_sum": 32725.739231884814
+    },
+    {
+      "iteration": 83,
+      "error": 0.0017964888215544201,
+      "background_weight_sum": 32720.182478784125
+    },
+    {
+      "iteration": 84,
+      "error": 0.0017855945471946823,
+      "background_weight_sum": 32714.64209136582
+    },
+    {
+      "iteration": 85,
+      "error": 0.0017748258181413032,
+      "background_weight_sum": 32709.1180623992
+    },
+    {
+      "iteration": 86,
+      "error": 0.0017641804056662562,
+      "background_weight_sum": 32703.610340309213
+    },
+    {
+      "iteration": 87,
+      "error": 0.001753656155360183,
+      "background_weight_sum": 32698.118890851398
+    },
+    {
+      "iteration": 88,
+      "error": 0.0017432509829747164,
+      "background_weight_sum": 32692.643650219492
+    },
+    {
+      "iteration": 89,
+      "error": 0.001732962835446554,
+      "background_weight_sum": 32687.184544486176
+    },
+    {
+      "iteration": 90,
+      "error": 0.0017227897153180723,
+      "background_weight_sum": 32681.741556271416
+    },
+    {
+      "iteration": 91,
+      "error": 0.0017127296463546164,
+      "background_weight_sum": 32676.314688044786
+    },
+    {
+      "iteration": 92,
+      "error": 0.001702780769485176,
+      "background_weight_sum": 32670.90386534541
+    },
+    {
+      "iteration": 93,
+      "error": 0.00169294122227039,
+      "background_weight_sum": 32665.509006432265
+    },
+    {
+      "iteration": 94,
+      "error": 0.001683209193890128,
+      "background_weight_sum": 32660.130158103773
+    },
+    {
+      "iteration": 95,
+      "error": 0.0016735829736787909,
+      "background_weight_sum": 32654.767271695997
+    },
+    {
+      "iteration": 96,
+      "error": 0.0016640608093667856,
+      "background_weight_sum": 32649.420328820997
+    },
+    {
+      "iteration": 97,
+      "error": 0.0016546410370824182,
+      "background_weight_sum": 32644.089235488093
+    },
+    {
+      "iteration": 98,
+      "error": 0.0016453220025773449,
+      "background_weight_sum": 32638.773918462044
+    },
+    {
+      "iteration": 99,
+      "error": 0.0016361020596161121,
+      "background_weight_sum": 32633.47438720405
+    },
+    {
+      "iteration": 100,
+      "error": 0.0016269796149114841,
+      "background_weight_sum": 32628.190660774017
+    },
+    {
+      "iteration": 101,
+      "error": 0.001617953133230507,
+      "background_weight_sum": 32622.922638247546
+    },
+    {
+      "iteration": 102,
+      "error": 0.0016090210668968045,
+      "background_weight_sum": 32617.670274439603
+    },
+    {
+      "iteration": 103,
+      "error": 0.0016001818935181703,
+      "background_weight_sum": 32612.43350124501
+    },
+    {
+      "iteration": 104,
+      "error": 0.0015914341338801258,
+      "background_weight_sum": 32607.212242390535
+    },
+    {
+      "iteration": 105,
+      "error": 0.001582776356382331,
+      "background_weight_sum": 32602.00647860492
+    },
+    {
+      "iteration": 106,
+      "error": 0.0015742071660221541,
+      "background_weight_sum": 32596.816176391436
+    },
+    {
+      "iteration": 107,
+      "error": 0.0015657251832072593,
+      "background_weight_sum": 32591.641271944798
+    },
+    {
+      "iteration": 108,
+      "error": 0.0015573290569430257,
+      "background_weight_sum": 32586.48171050788
+    },
+    {
+      "iteration": 109,
+      "error": 0.0015490174500744167,
+      "background_weight_sum": 32581.33742070551
+    },
+    {
+      "iteration": 110,
+      "error": 0.0015407890713791416,
+      "background_weight_sum": 32576.208332622504
+    },
+    {
+      "iteration": 111,
+      "error": 0.0015326426356919367,
+      "background_weight_sum": 32571.094419198165
+    },
+    {
+      "iteration": 112,
+      "error": 0.0015245769347040016,
+      "background_weight_sum": 32565.99569257217
+    },
+    {
+      "iteration": 113,
+      "error": 0.0015165908046874867,
+      "background_weight_sum": 32560.912078517795
+    },
+    {
+      "iteration": 114,
+      "error": 0.0015086830516982887,
+      "background_weight_sum": 32555.843495634756
+    },
+    {
+      "iteration": 115,
+      "error": 0.0015008525018107627,
+      "background_weight_sum": 32550.78987987782
+    },
+    {
+      "iteration": 116,
+      "error": 0.0014930980004279385,
+      "background_weight_sum": 32545.75116730509
+    },
+    {
+      "iteration": 117,
+      "error": 0.0014854184187623046,
+      "background_weight_sum": 32540.72730342734
+    },
+    {
+      "iteration": 118,
+      "error": 0.0014778126603345691,
+      "background_weight_sum": 32535.718245612035
+    },
+    {
+      "iteration": 119,
+      "error": 0.0014702796468187894,
+      "background_weight_sum": 32530.723998636924
+    },
+    {
+      "iteration": 120,
+      "error": 0.0014628183484823377,
+      "background_weight_sum": 32525.744524736838
+    },
+    {
+      "iteration": 121,
+      "error": 0.001455427750216316,
+      "background_weight_sum": 32520.779748653757
+    },
+    {
+      "iteration": 122,
+      "error": 0.0014481068248309533,
+      "background_weight_sum": 32515.829604001643
+    },
+    {
+      "iteration": 123,
+      "error": 0.0014408545646971572,
+      "background_weight_sum": 32510.894012578436
+    },
+    {
+      "iteration": 124,
+      "error": 0.0014336699927849884,
+      "background_weight_sum": 32505.972925836864
+    },
+    {
+      "iteration": 125,
+      "error": 0.0014265521717974833,
+      "background_weight_sum": 32501.066281946674
+    },
+    {
+      "iteration": 126,
+      "error": 0.0014195001793300235,
+      "background_weight_sum": 32496.174005104316
+    },
+    {
+      "iteration": 127,
+      "error": 0.0014125130893377284,
+      "background_weight_sum": 32491.29600423776
+    },
+    {
+      "iteration": 128,
+      "error": 0.001405589999132404,
+      "background_weight_sum": 32486.432196407266
+    },
+    {
+      "iteration": 129,
+      "error": 0.001398730025454588,
+      "background_weight_sum": 32481.58250925385
+    },
+    {
+      "iteration": 130,
+      "error": 0.0013919322813116712,
+      "background_weight_sum": 32476.74687931422
+    },
+    {
+      "iteration": 131,
+      "error": 0.001385195902836125,
+      "background_weight_sum": 32471.925268466497
+    },
+    {
+      "iteration": 132,
+      "error": 0.001378520074381594,
+      "background_weight_sum": 32467.11761648672
+    },
+    {
+      "iteration": 133,
+      "error": 0.001371903959598425,
+      "background_weight_sum": 32462.323849915527
+    },
+    {
+      "iteration": 134,
+      "error": 0.0013653467349148958,
+      "background_weight_sum": 32457.54391626147
+    },
+    {
+      "iteration": 135,
+      "error": 0.0013588476095160494,
+      "background_weight_sum": 32452.777886214215
+    },
+    {
+      "iteration": 136,
+      "error": 0.0013524059532532377,
+      "background_weight_sum": 32448.02568003257
+    },
+    {
+      "iteration": 137,
+      "error": 0.0013460209812800486,
+      "background_weight_sum": 32443.287160229214
+    },
+    {
+      "iteration": 138,
+      "error": 0.0013396919374576166,
+      "background_weight_sum": 32438.56225507157
+    },
+    {
+      "iteration": 139,
+      "error": 0.0013334180645888103,
+      "background_weight_sum": 32433.85092580173
+    },
+    {
+      "iteration": 140,
+      "error": 0.001327198661470406,
+      "background_weight_sum": 32429.15314596662
+    },
+    {
+      "iteration": 141,
+      "error": 0.0013210330299964232,
+      "background_weight_sum": 32424.468855722087
+    },
+    {
+      "iteration": 142,
+      "error": 0.0013149204436149573,
+      "background_weight_sum": 32419.797991679083
+    },
+    {
+      "iteration": 143,
+      "error": 0.0013088601859944618,
+      "background_weight_sum": 32415.14048116983
+    },
+    {
+      "iteration": 144,
+      "error": 0.0013028515629421784,
+      "background_weight_sum": 32410.496258347488
+    },
+    {
+      "iteration": 145,
+      "error": 0.0012968939022473865,
+      "background_weight_sum": 32405.86526419587
+    },
+    {
+      "iteration": 146,
+      "error": 0.0012909865346842288,
+      "background_weight_sum": 32401.24742667732
+    },
+    {
+      "iteration": 147,
+      "error": 0.0012851288024125812,
+      "background_weight_sum": 32396.642679777495
+    },
+    {
+      "iteration": 148,
+      "error": 0.0012793200580477112,
+      "background_weight_sum": 32392.05097278684
+    },
+    {
+      "iteration": 149,
+      "error": 0.0012735596653677536,
+      "background_weight_sum": 32387.472260396284
+    },
+    {
+      "iteration": 150,
+      "error": 0.0012678470115094539,
+      "background_weight_sum": 32382.906463841602
+    },
+    {
+      "iteration": 151,
+      "error": 0.0012621814948576401,
+      "background_weight_sum": 32378.353536528855
+    },
+    {
+      "iteration": 152,
+      "error": 0.0012565625312785703,
+      "background_weight_sum": 32373.81343844456
+    },
+    {
+      "iteration": 153,
+      "error": 0.0012509895405093468,
+      "background_weight_sum": 32369.28611112501
+    },
+    {
+      "iteration": 154,
+      "error": 0.001245461939373886,
+      "background_weight_sum": 32364.77149250912
+    },
+    {
+      "iteration": 155,
+      "error": 0.0012399791557566482,
+      "background_weight_sum": 32360.269523564923
+    },
+    {
+      "iteration": 156,
+      "error": 0.0012345406247176616,
+      "background_weight_sum": 32355.780163174197
+    },
+    {
+      "iteration": 157,
+      "error": 0.0012291457972884142,
+      "background_weight_sum": 32351.303343316118
+    },
+    {
+      "iteration": 158,
+      "error": 0.0012237941303242612,
+      "background_weight_sum": 32346.838993294605
+    },
+    {
+      "iteration": 159,
+      "error": 0.0012184850926660823,
+      "background_weight_sum": 32342.387049212888
+    },
+    {
+      "iteration": 160,
+      "error": 0.0012132181687655667,
+      "background_weight_sum": 32337.94746428094
+    }
+  ],
+  "scope": "No motif scanning, discovery, or p-value analysis was run. No BED/FASTA was changed.",
+  "author_table_denominator_check": {
+    "method": "Intersect rounding intervals: background count +/-0.05; proportion +/-0.00005",
+    "usable_rows": 331,
+    "lower_bound": 32333.4911803007,
+    "upper_bound": 32333.610519203783,
+    "replayed_weight_sum_in_interval": true
+  },
+  "source_code": [
+    {
+      "file": "findMotifsGenome.pl",
+      "sha256": "30f448b6b411140ffff1a548072372602d5b1d105dea143ac5602d833be9a6ab",
+      "url": "https://raw.githubusercontent.com/c-guzman/cipher-workflow-platform/master/bin/homer/bin/findMotifsGenome.pl",
+      "retrieved_date": "2026-11-24",
+      "status": "HOMER source mirror, not the recovered author-installed executable; content pinned by SHA-256"
+    },
+    {
+      "file": "freq2group.pl",
+      "sha256": "99377c88e0a269c046d690929f7b09fe993a0e580d9842a29e1b4fcbee28a538",
+      "url": "https://raw.githubusercontent.com/c-guzman/cipher-workflow-platform/master/bin/homer/bin/freq2group.pl",
+      "retrieved_date": "2026-11-24",
+      "status": "HOMER source mirror, not the recovered author-installed executable; content pinned by SHA-256"
+    },
+    {
+      "file": "assignGeneWeights.pl",
+      "sha256": "39590e3cdc5c32202ea11da881a3b26210c1e403bf44f346873ca368239e6388",
+      "url": "https://raw.githubusercontent.com/c-guzman/cipher-workflow-platform/master/bin/homer/bin/assignGeneWeights.pl",
+      "retrieved_date": "2026-11-24",
+      "status": "HOMER source mirror, not the recovered author-installed executable; content pinned by SHA-256"
+    },
+    {
+      "file": "removePoorSeq.pl",
+      "sha256": "59013c7dfd4b4a64458c10aa9ce5fcb6248c47261b8d74b84ab896f5187941c4",
+      "url": "https://raw.githubusercontent.com/c-guzman/cipher-workflow-platform/master/bin/homer/bin/removePoorSeq.pl",
+      "retrieved_date": "2026-11-24",
+      "status": "HOMER source mirror, not the recovered author-installed executable; content pinned by SHA-256"
+    },
+    {
+      "file": "findKnownMotifs.pl",
+      "sha256": "3fc27938d86c3d39e0c4b437fe6cb756dc310af0b2dfb10c800426ce59bebf9a",
+      "url": "https://raw.githubusercontent.com/c-guzman/cipher-workflow-platform/master/bin/homer/bin/findKnownMotifs.pl",
+      "retrieved_date": "2026-11-24",
+      "status": "HOMER source mirror, not the recovered author-installed executable; content pinned by SHA-256"
+    },
+    {
+      "file": "Motif2.cpp",
+      "sha256": "b185e1ddb5ac9cc58afe81dc4d3093332085c3bb411c346e1b0ffa461498e112",
+      "url": "https://raw.githubusercontent.com/c-guzman/cipher-workflow-platform/master/bin/homer/cpp/Motif2.cpp",
+      "retrieved_date": "2026-11-24",
+      "status": "HOMER source mirror, not the recovered author-installed executable; content pinned by SHA-256"
+    },
+    {
+      "file": "Motif2.h",
+      "sha256": "b132c9cd20c11bcf5011ceffe7b87e8a7cb27ea88f4ce92067fb195b3c1186fb",
+      "url": "https://raw.githubusercontent.com/c-guzman/cipher-workflow-platform/master/bin/homer/cpp/Motif2.h",
+      "retrieved_date": "2026-11-24",
+      "status": "HOMER source mirror, not the recovered author-installed executable; content pinned by SHA-256"
+    },
+    {
+      "file": "SeqTag.cpp",
+      "sha256": "f5b7122cfd7e37a9536cf7d772f72e5e06b7867a97f990c6d5f9a1d475566ef9",
+      "url": "https://raw.githubusercontent.com/c-guzman/cipher-workflow-platform/master/bin/homer/cpp/SeqTag.cpp",
+      "retrieved_date": "2026-11-24",
+      "status": "HOMER source mirror, not the recovered author-installed executable; content pinned by SHA-256"
+    }
+  ],
+  "version_limitation": "Exact author-installed HOMER version/log was not recovered. Source-rule replay agrees with all usable author-table rows; this does not claim a complete original-run reproduction."
+}

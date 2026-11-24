@@ -1,0 +1,11 @@
+{
+  "database_release": "Full author-supplied chromVar_HOMER library; 332 matrices, 331 names",
+  "source_url": "https://raw.githubusercontent.com/cejuliano/jcazet_regeneration_patterning/845fdb5794ceff0fa42eac6f8696499214f94991/local/resources/chromVar_HOMER.motifs",
+  "original_sha256": "4377483f12f0f86538fe64ec4bba5d8674d35e9a1e4b10991c09202ac555083e",
+  "transformation": "Keep all matrices in original order. Keep only consensus, full motif name and score threshold in each header; remove pre-existing enrichment statistics.",
+  "files": {
+    "motifs.homer": {
+      "sha256": "f9f3e026efdd47b090b05b3b7816d78be0fa4325025bf5b08a4cad64741c1d4f"
+    }
+  }
+}

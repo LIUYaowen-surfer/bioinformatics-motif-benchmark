@@ -1,0 +1,11 @@
+data/
+downloads/
+_work/
+__pycache__/
+*.pyc
+.venv/
+*.tar.gz
+*.xlsx
+*.fasta
+*.bed
+result.json
