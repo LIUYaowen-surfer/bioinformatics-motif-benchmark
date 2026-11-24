@@ -34,7 +34,17 @@ The exporter verifies hashes and writes only anonymous target/background FASTA, 
 
 ## Run and score
 
-Install the chosen tools before running the Agent. [eval_config.yaml](eval_config.yaml) records utility versions and environment requirements, not a tested motif-analysis environment lock. Give all Agents identical database releases and resource limits, and run offline with only the exported workspace mounted.
+The benchmark selects **HOMER 5.1** and **MEME Suite 5.5.7** for new evaluation runs. These are benchmark choices, not recovered author versions. [eval_config.yaml](eval_config.yaml) records those exact versions, the tested Python version, database manifests and validation status. Analysis-tool installation and enrichment runs have not yet been tested; this is not a solved dependency or container lock.
+
+All Python preparation/audit dependencies are consolidated in `requirements.txt` (openpyxl and NumPy, both pinned). Install them with the command above. `eval_config.yaml` refers to that file instead of duplicating package versions; it describes the overall evaluation and is not accepted by pip as an installation file. HOMER and MEME are separate analysis applications, not Python pip dependencies.
+
+On Linux/WSL2 with Conda available, the selected analysis versions can be requested with the following command (installation not yet validated here):
+
+```sh
+conda create -n motif-analysis --override-channels -c conda-forge -c bioconda --strict-channel-priority homer=5.1 meme=5.5.7
+```
+
+Before official evaluation, verify installed versions and archive resolved package builds or a container digest, command lines and resource limits. Give all Agents identical software, database releases and resource limits, and run offline with only the exported workspace mounted.
 
 The Agent writes `result.json` with `{"ids": [...]}` containing exactly 10 unique IDs. Outside its environment, score against the selected task:
 

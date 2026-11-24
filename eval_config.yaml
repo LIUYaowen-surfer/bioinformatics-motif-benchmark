@@ -1,13 +1,30 @@
-# Verified utility runtime, not an installed analysis environment lock.
-utility_runtime_tested:
-  python: "3.12.14"
-  openpyxl: "3.1.5"
-  numpy_for_optional_background_audit: "2.3.5"
-minimum_python: "3.11"
+# Evaluation specification; not a conda environment file or solved dependency lock.
+schema_version: 1
+utility_environment:
+  python_version: "3.12.14"
+  requirements_file: "requirements.txt"
+  validation_status: "tested locally: preparation, scoring, and background audit"
 analysis_environment:
-  network: "offline"
-  homer_version: "evaluator must install and record; original author version unresolved"
-  meme_suite_version: "evaluator must install and record; historical defaults not frozen"
-  hydra_motif_database: "resources/hydra/resource_manifest.json"
-  arabidopsis_cisbp_database: "complete versioned Cis-BP library required; see docs/resources.md"
-# Record the same database releases, resource hashes and resource limits for all Agents.
+  platform: "linux-64 (Linux or Windows WSL2)"
+  network_during_evaluation: "offline"
+  homer:
+    version: "5.1"
+    conda_package: "bioconda::homer=5.1"
+    version_source: "https://github.com/bioconda/bioconda-recipes/blob/master/recipes/homer/meta.yaml"
+  meme_suite:
+    version: "5.5.7"
+    conda_package: "bioconda::meme=5.5.7"
+    version_source: "https://meme-suite.org/meme/meme-software/index.html"
+  validation_status: "versions selected for this benchmark; installation and analysis not yet tested"
+  original_paper_versions_verified: false
+  dependency_builds_locked: false
+motif_databases:
+  task_01_manifest: "resources/hydra/resource_manifest.json"
+  task_02_manifest: "resources/cisbp/resource_manifest.json"
+scoring:
+  metric: "exact_top10_id_overlap"
+  top_k: 10
+  minimum_score: 0
+  maximum_score: 10
+# Before an official run, archive resolved builds/container digest, actual version
+# output, commands, database hashes and resource limits; use the same environment for all Agents.
