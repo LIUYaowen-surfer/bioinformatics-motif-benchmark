@@ -24,10 +24,11 @@ Create a fresh Agent workspace outside the repository:
 
 ```sh
 python scripts/prepare_inputs.py --task task_01 --source-dir data --output-dir ../motif_agent_01
-python scripts/prepare_inputs.py --task task_02 --source-dir data --resources-dir /path/to/cisbp_resources --output-dir ../motif_agent_02
+python scripts/prepare_cisbp.py --output-dir data/cisbp_resources
+python scripts/prepare_inputs.py --task task_02 --source-dir data --resources-dir data/cisbp_resources --output-dir ../motif_agent_02
 ```
 
-Task 01 includes the full 332-matrix motif library with previous enrichment statistics removed from headers. Task 02 requires a separately prepared **complete Cis-BP library** in the original motif-ID namespace; see [resource requirements](docs/resources.md). Do not build that library from the reference Top 10. The historical library release is not yet frozen locally, so Task 02 is not a fully standardized offline run.
+Task 01 includes the full 332-matrix motif library with previous enrichment statistics removed from headers. Task 02 preparation downloads and verifies the **309-motif Arabidopsis Cis-BP 1.02 RSAT mirror**, then converts it to MEME format using pinned source/output hashes; see [resource requirements](docs/resources.md). All candidate motifs are retained. This mirror is now frozen for preparation, but identity with the paper's original database and exact historical analysis remains unproven.
 
 The exporter verifies hashes and writes only anonymous target/background FASTA, the common `prompt.md`, neutral task instructions and allowlisted motif resources. It does not export author tables, genomic coordinates, references, paper links, evaluator scripts or repository history. Existing output directories are refused.
 
@@ -64,6 +65,7 @@ inputs.json / sources.json
 scripts/                  preparation, extraction, scoring, validation
 task_01/ and task_02/      evaluator notes, source links, Top-10 and full evidence
 resources/hydra/          full motif universe, sanitized headers
+resources/cisbp/          frozen source/output hashes and provenance
 docs/                     resource requirements and background audit
 tests/                    meaningful format/scoring/preparation regressions
 ```

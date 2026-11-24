@@ -1,0 +1,30 @@
+{
+  "database_release": "Cis-BP 1.02 Arabidopsis thaliana collection (RSAT mirror, 309 motifs)",
+  "source_url": "https://rsat.eead.csic.es/plants/motif_databases/cisBP/CisBp_A_thaliana.tf",
+  "source_file": {
+    "name": "CisBp_A_thaliana.tf",
+    "sha256": "7fd2ecab4d39ec7e6838a8ad772f0c6b487c091479a2f8ed30678c3bccdf4497",
+    "size_bytes": 231312
+  },
+  "files": {
+    "motifs.meme": {
+      "sha256": "939d57c2be2522d9403f4e6dbb3adc1c31362e9dd4209f1736eaf65ee6c8ed4c",
+      "size_bytes": 201647,
+      "motif_count": 309
+    }
+  },
+  "conversion": {
+    "method": "Parse AC identifiers and A/C/G/T matrix rows from TRANSFAC; normalize each row by its sum; emit 12 decimal places in MEME format. No motifs filtered; original order retained.",
+    "background_frequencies": "Not embedded; analysis must specify its background model.",
+    "pseudocount": 0
+  },
+  "validation": {
+    "unique_motif_ids": 309,
+    "namespace": "M<number>_1.02",
+    "all_probability_rows_sum_to_one_within": 1e-10
+  },
+  "limitations": [
+    "Historical RSAT mirror; byte identity with the database used by the paper is not established.",
+    "Source matrices use rounded integer values; this conversion cannot restore precision lost before mirroring."
+  ]
+}

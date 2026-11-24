@@ -21,7 +21,7 @@ Both tasks score exact Top-10 ID overlap from 0 to 10. No F1 score or different 
 ## Limits that remain
 
 - Methods describe 300-bp windows and S1 lists 5,895 enriched THSs, whereas supplied S4 sequences are 10,013 × 100 bp. All sequence coordinates overlap enriched S1 regions, covering 5,885 of 5,895; five sequences cross two regions. Exact generation of these inputs remains unresolved. CentriMo positional statistics may reflect a different window representation. Scores measure correspondence to author labels, not a proven exact rerun from these 100-bp sequences.
-- A complete versioned Cis-BP motif library in the original motif-ID namespace must be supplied as [offline resources](../docs/resources.md). It has not been recovered as a frozen historical resource.
+- The 309-motif Cis-BP 1.02 RSAT mirror is frozen by source/output hashes and can be prepared as [offline resources](../docs/resources.md). Its identity with the paper's original matrix file remains unproven; mirror rounding may affect results.
 - TAIR10 is the reported assembly; a complete genome is unnecessary for consuming author sequences and is not included.
 - Local source hashes were verified, but manual PMC downloads were not independently matched to a remote official checksum.
 
