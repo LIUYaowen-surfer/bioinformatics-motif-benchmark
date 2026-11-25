@@ -2,7 +2,8 @@
 schema_version: 1
 utility_environment:
   python_version: "3.12.14"
-  requirements_file: "requirements.txt"
+  # Keep this list in JSON-compatible YAML flow syntax for the standard-library installer.
+  pip_dependencies: ["openpyxl==3.1.5", "numpy==2.3.5"]
   validation_status: "tested locally: preparation, scoring, and background audit"
 analysis_environment:
   platform: "linux-64 (Linux or Windows WSL2)"

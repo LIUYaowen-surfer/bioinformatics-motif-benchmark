@@ -19,7 +19,7 @@ The exact author-installed HOMER executable and original group file were not rec
 Optional reproduction, using a prepared data root containing `task_01/input/`:
 
 ```sh
-python -m pip install -r requirements.txt
+python scripts/install_dependencies.py
 python scripts/audit_hydra_background.py --root data
 ```
 

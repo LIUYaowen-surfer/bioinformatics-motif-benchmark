@@ -14,7 +14,7 @@ These are sequence-level tasks, not raw ATAC-seq analysis tasks. Task 02 intenti
 Source links and pinned hashes are included. Large genomes, spreadsheets and sequence inputs are not committed. If you already have the reviewed `motif-data-preparation` directory, use it directly as `--source-dir` below. Otherwise download the sources linked from each task's `filelink.md`, preserving their `hydra/` and `arabidopsis/` subfolders, then rebuild:
 
 ```sh
-python -m pip install -r requirements.txt
+python scripts/install_dependencies.py
 python scripts/rebuild_inputs.py --downloads downloads --output-dir data
 ```
 
@@ -36,7 +36,7 @@ The exporter verifies hashes and writes only anonymous target/background FASTA, 
 
 The benchmark selects **HOMER 5.1** and **MEME Suite 5.5.7** for new evaluation runs. These are benchmark choices, not recovered author versions. [eval_config.yaml](eval_config.yaml) records those exact versions, the tested Python version, database manifests and validation status. Analysis-tool installation and enrichment runs have not yet been tested; this is not a solved dependency or container lock.
 
-All Python preparation/audit dependencies are consolidated in `requirements.txt` (openpyxl and NumPy, both pinned). Install them with the command above. `eval_config.yaml` refers to that file instead of duplicating package versions; it describes the overall evaluation and is not accepted by pip as an installation file. HOMER and MEME are separate analysis applications, not Python pip dependencies.
+All Python preparation/audit dependencies are pinned directly in `eval_config.yaml` under `utility_environment.pip_dependencies`. There is no separate requirements file. `python scripts/install_dependencies.py` reads that list and installs it with the current Python interpreter; `python scripts/install_dependencies.py --check` verifies installed versions without installing anything. The installer uses only the Python standard library and expects the documented JSON-compatible YAML flow-list syntax. HOMER and MEME remain separate analysis applications installed through the command below.
 
 On Linux/WSL2 with Conda available, the selected analysis versions can be requested with the following command (installation not yet validated here):
 
