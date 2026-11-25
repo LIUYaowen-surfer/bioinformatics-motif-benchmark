@@ -1,13 +1,13 @@
 # Bioinformatics Motif Benchmark
 
-Identify the **top 10 motifs** from DNA sequences and compare them with author-published results. Both tasks use the same scoring rule: exact Top-10 ID overlap, **0–10**, with no F1 score or rank weighting. The layout follows [Bioinformatics DEG Benchmark](https://github.com/LIUYaowen-surfer/bioinformatics-deg-benchmark).
+Identify the **top 10 motifs** from DNA sequences and compare them with author-published results. Both tasks use the same scoring rule: exact Top-10 ID overlap, **0–10**.
 
 | Task | Input | Author Top-10 selection | Reference |
 |---|---|---|---|
 | [task_01](task_01/README.md) | Hydra 0–3 h opening regions; 2,183 target / 33,214 explicit background sequences | HOMER known motifs, ascending enrichment p-value | [Top 10](task_01/reference/top10.json) |
 | [task_02](task_02/README.md) | Arabidopsis mesophyll; 10,013 author-supplied masked sequences | Cis-BP database motifs in CentriMo, ascending positional-enrichment E-value | [Top 10](task_02/reference/top10.json) |
 
-These are sequence-level tasks, not raw ATAC-seq analysis tasks. Task 02 intentionally selects the Cis-BP CentriMo sub-analysis; the unranked 291-AGI author list and Tomtom match p-values are not used to invent a Top 10. The original 100-bp input versus 300-bp Methods discrepancy remains documented.
+These sequence-level tasks rank motifs using HOMER enrichment P-values for Task 01 and Cis-BP CentriMo positional-enrichment E-values for Task 02. Task 02 has a documented discrepancy between the supplied 100-bp sequences and the 300-bp windows described in Methods.
 
 ## Prepare the workspace
 
@@ -18,7 +18,7 @@ python scripts/install_dependencies.py
 python scripts/rebuild_inputs.py --downloads downloads --output-dir data
 ```
 
-Hydra sequences are extracted from the author's BSgenome 2bit genome using BED zero-based half-open intervals, without installing R or substituting a newer assembly. Arabidopsis sequences are copied from author S4 cells. Rebuilt FASTA hashes must match the reviewed inputs. No motif analysis runs during this step.
+Hydra sequences are extracted from the author's BSgenome 2bit genome using BED zero-based half-open intervals, using the repository's Python extractor. Arabidopsis sequences are copied from author S4 cells. Rebuilt FASTA hashes must match the reviewed inputs. No motif analysis runs during this step.
 
 Create a fresh Agent workspace outside the repository:
 
@@ -36,7 +36,7 @@ The exporter verifies hashes and writes only anonymous target/background FASTA, 
 
 The benchmark selects **HOMER 5.1** and **MEME Suite 5.5.7** for new evaluation runs. These are benchmark choices, not recovered author versions. [eval_config.yaml](eval_config.yaml) records those exact versions, the tested Python version, database manifests and validation status. Analysis-tool installation and enrichment runs have not yet been tested; this is not a solved dependency or container lock.
 
-All Python preparation/audit dependencies are pinned directly in `eval_config.yaml` under `utility_environment.pip_dependencies`. There is no separate requirements file. `python scripts/install_dependencies.py` reads that list and installs it with the current Python interpreter; `python scripts/install_dependencies.py --check` verifies installed versions without installing anything. The installer uses only the Python standard library and expects the documented JSON-compatible YAML flow-list syntax. HOMER and MEME remain separate analysis applications installed through the command below.
+All Python preparation/audit dependencies are pinned directly in `eval_config.yaml` under `utility_environment.pip_dependencies`. `python scripts/install_dependencies.py` reads that list and installs it with the current Python interpreter; `python scripts/install_dependencies.py --check` verifies installed versions without installing anything. The installer uses only the Python standard library and expects the documented JSON-compatible YAML flow-list syntax. HOMER and MEME remain separate analysis applications installed through the command below.
 
 On Linux/WSL2 with Conda available, the selected analysis versions can be requested with the following command (installation not yet validated here):
 
@@ -65,7 +65,7 @@ python scripts/validate_repository.py
 
 The extractor verifies source SHA-256 values and writes `task_XX/reference/top10.json` plus complete `author_results.json`. Use `--task task_01` or `--task task_02` to limit extraction. Existing output paths are never overwritten. Full evidence retains the corrected Task 02 AGI lists, Tomtom and CentriMo records, separately from the simple scoring answer.
 
-The [Hydra background audit](docs/hydra_background.md) explains why 33,214 raw regions produce an effective background weight near 32,333.52; no input records were deleted to force agreement with the published table heading.
+The [Hydra background audit](docs/hydra_background.md) explains why 33,214 raw regions produce an effective background weight near 32,333.52. The audit accounts for GC-bin support and normalization weights.
 
 ## Structure and limitations
 

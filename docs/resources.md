@@ -4,7 +4,7 @@
 
 `resources/hydra/motifs.homer` retains all 332 matrices in the author's full generic chromVar/HOMER library, in original order. Keep consensus, full motif name and scoring threshold; prior enrichment statistics after header field 3 are removed. Matrix rows are unchanged. Source URL, original hash and sanitized hash are in `resource_manifest.json`.
 
-This is the full candidate motif universe, not a Top-10 subset. Original discovery-study labels inside motif names belong to the HOMER ID namespace and remain necessary for exact matching.
+This is the full candidate motif universe. Original discovery-study labels inside motif names belong to the HOMER ID namespace and remain necessary for exact matching.
 
 ## Arabidopsis / Cis-BP
 
@@ -28,7 +28,7 @@ Use a new output directory. Both routes verify the frozen source hash before con
 python scripts/prepare_inputs.py --task task_02 --source-dir data --resources-dir data/cisbp_resources --output-dir ../motif_agent_02
 ```
 
-The exporter checks the manifest hash and motif syntax, then copies only `motifs.meme` into the Agent resource directory. Supply the same frozen library to every Agent. Do not filter by reference results or construct a library from the 291 AGIs. No DAP-seq library or motif-to-AGI mapping is required for this protocol.
+The exporter checks the manifest hash and motif syntax, then copies only `motifs.meme` into the Agent resource directory. Supply the complete frozen library to every Agent.
 
 This freezes a reproducible mirror-based candidate library, **not proof of identity with the paper's original database**. The mirror stores rounded integer matrix values; conversion cannot recover previously lost precision. No background frequencies are embedded: the analysis must specify and record its statistical background model. No biological baseline has been run.
 

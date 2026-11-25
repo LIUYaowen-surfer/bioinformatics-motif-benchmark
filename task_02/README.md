@@ -6,17 +6,17 @@ Evaluator documentation; do not supply it to the Agent.
 - [GEO GSE101940](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE101940).
 - [Source links](filelink.md), [scoring answer](reference/top10.json), [complete author evidence](reference/author_results.json).
 
-The target FASTA contains all 10,013 100-bp masked sequences from S4 `Sequences`, column B (`RBC-Enriched-THSs`), unchanged apart from anonymized headers in exported workspaces. RBC denotes mesophyll; CLV3 results are excluded. No explicit negative FASTA is published. MEME-ChIP background behavior depends on software version and component; record it rather than claiming that absence of a negative FASTA means no statistical background.
+The target FASTA contains all 10,013 100-bp masked sequences from S4 `Sequences`, column B (`RBC-Enriched-THSs`), unchanged apart from anonymized headers in exported workspaces. RBC denotes mesophyll. No explicit negative FASTA is published. Record the statistical background model for each MEME-ChIP component and its software version.
 
-The complete audit evidence includes the unranked union of **291 TF AGIs** in the author's RBC organized lists: 175 Cis-BP rows / 173 AGIs and 173 DAP-seq rows / 171 AGIs, including row 2. This is a gene-level reference, not 291 unique PWMs. Full evidence retains 638 Tomtom matches (181+46 Cis-BP DREME/MEME; 326+85 DAP-seq) and 570 CentriMo rows (234 Cis-BP, 336 DAP-seq), without pooling their statistics into a fabricated rank.
+The complete audit evidence includes the unranked union of **291 TF AGIs** in the author's RBC organized lists: 175 Cis-BP rows / 173 AGIs and 173 DAP-seq rows / 171 AGIs, including row 2. These lists provide gene-level audit evidence. Full evidence retains 638 Tomtom matches (181+46 Cis-BP DREME/MEME; 326+85 DAP-seq) and 570 CentriMo rows (234 Cis-BP, 336 DAP-seq).
 
 Tomtom statistics describe motif similarity. The source DREME/MEME blocks do not report the original discovery enrichment p-values. Both query ID and actual query consensus are preserved. E <= 0.05 selects 154 raw Tomtom matches and 438 CentriMo rows; E < 0.05 selects 437 CentriMo rows. The Methods/Overview differ at equality; both flags are retained, and the primary author-organized set is not reconstructed by that cutoff.
 
 ## Scored Top 10
 
-The scoring reference uses the Cis-BP CentriMo block only: `# db = 3`, ascending `E-value`, source row as tie-breaker, first 10 rows (234–243). The IDs are Cis-BP motif IDs, not TF AGIs. DREME/MEME-generated de novo entries, DAP-seq entries and Tomtom similarity statistics are excluded from this ranking. All selected 10 are significant. The 291-AGI collection remains audit evidence only and is not given an invented rank.
+The scoring reference uses the Cis-BP CentriMo block only: `# db = 3`, ascending `E-value`, source row as tie-breaker, first 10 rows (234–243). The IDs are Cis-BP motif IDs. All selected 10 are significant. The 291-AGI collection provides supplementary audit evidence.
 
-Both tasks score exact Top-10 ID overlap from 0 to 10. No F1 score or different task-specific scoring algorithm is used.
+Both tasks score exact Top-10 ID overlap from 0 to 10.
 
 ## Limits that remain
 

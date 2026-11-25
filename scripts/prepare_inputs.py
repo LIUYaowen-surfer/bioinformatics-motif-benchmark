@@ -119,8 +119,8 @@ def prepare(task, source, output, resource_dir=None):
         contract = {
             'input': 'input/target.fasta', 'sequence_counts': counts,
             'background': 'input/background.fasta' if task == 'task_01' else None,
-            'background_policy': 'Use the supplied explicit background with composition correction' if task == 'task_01' else 'No explicit negative FASTA was supplied. Use and document a justified sequence background model; do not treat another cell type as the author background.',
-            'objective': 'Rank known motifs by enrichment p-value; return the top 10 distinct full HOMER motif names, with no added significance threshold. Break ties by database order.' if task == 'task_01' else 'Rank Cis-BP database motifs by CentriMo positional-enrichment E-value and return the top 10 distinct motif IDs. Exclude de novo query motifs and other databases. Do not rank by Tomtom similarity statistics or by AGI gene name.',
+            'background_policy': 'Use the supplied explicit background with composition correction' if task == 'task_01' else 'Use and document a justified sequence background model for the supplied target sequences.',
+            'objective': 'Rank known motifs by enrichment P-value in ascending order; return the top 10 distinct full HOMER motif names. Break ties by database order.' if task == 'task_01' else 'Rank motifs in the supplied Cis-BP database by CentriMo positional-enrichment E-value in ascending order; return the top 10 distinct motif IDs. Break ties by database order.',
             'id_namespace': 'HOMER full motif name' if task == 'task_01' else 'Cis-BP motif ID (M####_1.02 namespace)',
             'output_count': 10,
             'resource_sha256': hashes,

@@ -136,7 +136,7 @@ def build_hydra_reference() -> dict:
 
 
 # Table S4 has independent author-organized, Tomtom and CentriMo sections.
-# Keep the author TF set as the primary answer; do not invent an enrichment rank.
+# Preserve each section independently as complete author evidence.
 ARABIDOPSIS_SHEETS = [
     ("RBC-Enriched-THSs-CisBP", "Cis-BP", 6),
     ("RBC-Enriched-THSs-DAP-seq", "DAP-seq", 5),

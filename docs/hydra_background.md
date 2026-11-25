@@ -1,6 +1,6 @@
 # Hydra background count audit
 
-The raw background consists of **33,214** BED/FASTA records. It is not missing 881 records. Replaying the relevant HOMER source rules gives:
+The raw background consists of **33,214** BED/FASTA records. Replaying the relevant HOMER source rules gives:
 
 | Stage | Background |
 |---|---:|
@@ -10,7 +10,7 @@ The raw background consists of **33,214** BED/FASTA records. It is not missing 8
 | After default 1–3-mer normalization, written with 6 decimals | **32,333.520313** |
 | Author table heading | 32,333 |
 
-The two unsupported-bin IDs are 21973 and 92136 (60–70% GC). No sequence fails the default >70% N or length filters. The remaining decrease is a change in weights, not additional deleted BED records. No input is altered by this audit.
+The two unsupported-bin IDs are 21973 and 92136 (60–70% GC). No sequence fails the default >70% N or length filters. Normalization weights account for the remaining decrease. No input is altered by this audit.
 
 Independently, 331 nonzero author background count/proportion pairs constrain the effective denominator to **32,333.491180–32,333.610519**, allowing for displayed rounding. The replayed sum lies inside that interval. The integer header must not be interpreted as a raw region count.
 
